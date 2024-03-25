@@ -3,6 +3,7 @@
     xmlns="https://github.com/avaloniaui"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:materialIcons="using:Material.Icons.Avalonia"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:sidebar="clr-namespace:TeamsUI"
     xmlns:vm="clr-namespace:TeamsUI.ViewModels"
@@ -29,8 +30,16 @@
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center"
                 Orientation="Horizontal">
-                <Button VerticalAlignment="Center" Classes="Icon">''</Button>
-                <Button VerticalAlignment="Center" Classes="Icon">''</Button>
+                <Button
+                    VerticalAlignment="Center"
+                    Classes="Icon"
+                    Content="{materialIcons:MaterialIconExt Kind=ChevronLeft,
+                                                            Size=25}" />
+                <Button
+                    VerticalAlignment="Center"
+                    Classes="Icon"
+                    Content="{materialIcons:MaterialIconExt Kind=ChevronRight,
+                                                            Size=25}" />
             </StackPanel>
             <TextBox
                 Grid.Column="1"
