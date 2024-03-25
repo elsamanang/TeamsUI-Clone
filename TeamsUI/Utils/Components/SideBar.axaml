@@ -7,6 +7,5 @@
     d:DesignHeight="450"
     d:DesignWidth="80"
     mc:Ignorable="d">
-
     <ListBox Background="Red" />
 </UserControl>
