@@ -1,0 +1,25 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--  Region Colors  -->
+    <Color x:Key="PrimaryBlue">#444197</Color>
+    <Color x:Key="SecondaryBlue">#5059c9</Color>
+    <Color x:Key="ThirdBlue">#7a81e8</Color>
+    <Color x:Key="FourthBlue">#dadae9</Color>
+    <Color x:Key="PrimaryWhite">#ffffff</Color>
+    <Color x:Key="SecondaryWhite">#f5f5f5</Color>
+    <Color x:Key="PrimaryBlack">#242424</Color>
+    <Color x:Key="SecondaryBlack">#426869</Color>
+    <Color x:Key="ThirdBlack">#767676</Color>
+    <!--  End Colors  -->
+
+    <!--  Region Brush  -->
+    <SolidColorBrush x:Key="Blue100" Color="{DynamicResource PrimaryBlue}" />
+    <SolidColorBrush x:Key="Blue200" Color="{StaticResource SecondaryBlue}" />
+    <SolidColorBrush x:Key="Blue300" Color="{StaticResource ThirdBlue}" />
+    <SolidColorBrush x:Key="Blue400" Color="{StaticResource FourthBlue}" />
+    <SolidColorBrush x:Key="White100" Color="{StaticResource PrimaryWhite}" />
+    <SolidColorBrush x:Key="White200" Color="{StaticResource SecondaryWhite}" />
+    <SolidColorBrush x:Key="Black100" Color="{StaticResource PrimaryBlack}" />
+    <SolidColorBrush x:Key="Black200" Color="{StaticResource SecondaryBlack}" />
+    <SolidColorBrush x:Key="Black300" Color="{StaticResource ThirdBlack}" />
+    <!--  End Brush  -->
+</ResourceDictionary>
