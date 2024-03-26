@@ -3,9 +3,65 @@
     xmlns="https://github.com/avaloniaui"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:materialIcons="using:Material.Icons.Avalonia"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:TeamsUI.ViewModels.Components"
     d:DesignHeight="450"
     d:DesignWidth="80"
+    x:DataType="vm:SideBarViewModel"
     mc:Ignorable="d">
-    <ListBox Background="Red" />
+    <Design.DataContext>
+        <!--
+            This only sets the DataContext for the previewer in an IDE,
+            to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs)
+        -->
+        <vm:SideBarViewModel />
+    </Design.DataContext>
+    <Grid>
+        <Grid RowDefinitions="*,60">
+            <ListBox
+                Grid.Row="0"
+                Background="Transparent"
+                ItemsSource="{Binding Menus}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Height="60" RowDefinitions="*,*">
+                            <Button
+                                Grid.Row="0"
+                                HorizontalAlignment="Center"
+                                Classes="Icons"
+                                Content="{materialIcons:MaterialIconExt Kind=BellOutline,
+                                                                        Size=28}"
+                                Foreground="{DynamicResource Black300}" />
+                            <TextBlock
+                                Grid.Row="1"
+                                HorizontalAlignment="Center"
+                                FontSize="11"
+                                Foreground="{DynamicResource Black300}"
+                                Text="{Binding Name}" />
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Grid
+                Grid.Row="1"
+                Height="60"
+                Classes="Help"
+                RowDefinitions="*,*">
+                <Button
+                    Grid.Row="0"
+                    HorizontalAlignment="Center"
+                    Classes="Icons"
+                    Content="{materialIcons:MaterialIconExt Kind=QuestionMarkCircleOutline,
+                                                            Size=28}"
+                    Foreground="{DynamicResource Black300}" />
+                <TextBlock
+                    Grid.Row="1"
+                    HorizontalAlignment="Center"
+                    FontSize="11"
+                    Foreground="{DynamicResource Black300}"
+                    Text="Aide" />
+            </Grid>
+        </Grid>
+    </Grid>
 </UserControl>
