@@ -12,7 +12,6 @@ namespace TeamsUI.ViewModels.Components
     public partial class SideBarViewModel : ViewModelBase
     {
         private ObservableCollection<Menu> _menus;
-        public string Title => "titre";
 
         public ObservableCollection<Menu> Menus
         {

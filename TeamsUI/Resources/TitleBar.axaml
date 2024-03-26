@@ -42,23 +42,21 @@
         <Setter Property="BorderBrush" Value="Transparent" />
         <Setter Property="Foreground" Value="{DynamicResource Black100}" />
     </Style>
-    <Style Selector="Button.Icons">
-        <Setter Property="Background" Value="Transparent" />
-        <Setter Property="BorderThickness" Value="0" />
-    </Style>
-    <Style Selector="Button.Icons:pointerover">
-        <Setter Property="Background" Value="Transparent" />
-        <Setter Property="BorderThickness" Value="0" />
-    </Style>
-    <Style Selector="Button.Icons:pressed">
-        <Setter Property="Background" Value="Transparent" />
-        <Setter Property="BorderThickness" Value="0" />
-    </Style>
-    <Style Selector="Grid.Help">
+    <Style Selector="Border.Help">
         <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="BorderThickness" Value="0" />
+    </Style>
+    <Style Selector="Border.Help:focus">
         <Setter Property="Background" Value="Red" />
     </Style>
-    <Style Selector="Grid.Help:pointerover">
-        <Setter Property="Background" Value="Red" />
+    <Style Selector="Border.Help:pointerover">
+        <Setter Property="Background" Value="{DynamicResource White100}" />
+        <Setter Property="BorderThickness" Value="0" />
+    </Style>
+    <Style Selector="ListBoxItem">
+        <Setter Property="Background" Value="Transparent" />
+    </Style>
+    <Style Selector="ListBoxItem:pressed">
+        <Setter Property="BorderThickness" Value="2,0,0,0" />
     </Style>
 </Styles>
