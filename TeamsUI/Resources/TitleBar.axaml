@@ -42,14 +42,23 @@
         <Setter Property="BorderBrush" Value="Transparent" />
         <Setter Property="Foreground" Value="{DynamicResource Black100}" />
     </Style>
-    <Style Selector="StackPanel.Menu">
-        <Setter Property="Height" Value="58" />
-        <Setter Property="Width" Value="75" />
+    <Style Selector="Button.Icons">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderThickness" Value="0" />
     </Style>
-    <Style Selector="StackPanel.Menu:pointerover">
-        <Setter Property="Background" Value="{DynamicResource White100}" />
+    <Style Selector="Button.Icons:pointerover">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderThickness" Value="0" />
     </Style>
-    <Style Selector="StackPanel.Menu:pointerover/template/TextBlock">
-        <Setter Property="Foreground" Value="{DynamicResource Blue400}" />
+    <Style Selector="Button.Icons:pressed">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderThickness" Value="0" />
+    </Style>
+    <Style Selector="Grid.Help">
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Background" Value="Red" />
+    </Style>
+    <Style Selector="Grid.Help:pointerover">
+        <Setter Property="Background" Value="Red" />
     </Style>
 </Styles>
