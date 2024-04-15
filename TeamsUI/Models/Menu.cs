@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Material.Icons;
 
 namespace TeamsUI.Models
 {
     public class Menu
     {
         public required string Name { get; set; }
+        public required MaterialIconKind IconOutline { get; set; }
+        public required MaterialIconKind Icon { get; set; }
     }
 }
