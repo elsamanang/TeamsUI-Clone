@@ -10,6 +10,7 @@
     d:DesignHeight="450"
     d:DesignWidth="800"
     x:DataType="vm:MainViewModel"
+    Background="{DynamicResource White200}"
     mc:Ignorable="d">
     <Design.DataContext>
         <!--

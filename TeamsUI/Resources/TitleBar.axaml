@@ -12,7 +12,7 @@
     <Style Selector="Button.Icon">
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="Margin" Value="-4,0" />
+        <Setter Property="Margin" Value="-3,0" />
     </Style>
     <Style Selector="Button.Icon/template/ContentPresenter">
         <Setter Property="Foreground" Value="{DynamicResource Blue400}" />
@@ -41,15 +41,5 @@
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="BorderBrush" Value="Transparent" />
         <Setter Property="Foreground" Value="{DynamicResource Black100}" />
-    </Style>
-    <Style Selector="StackPanel.Menu">
-        <Setter Property="Height" Value="58" />
-        <Setter Property="Width" Value="75" />
-    </Style>
-    <Style Selector="StackPanel.Menu:pointerover">
-        <Setter Property="Background" Value="{DynamicResource White100}" />
-    </Style>
-    <Style Selector="StackPanel.Menu:pointerover/template/TextBlock">
-        <Setter Property="Foreground" Value="{DynamicResource Blue400}" />
     </Style>
 </Styles>

@@ -3,9 +3,169 @@
     xmlns="https://github.com/avaloniaui"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:materialIcons="using:Material.Icons.Avalonia"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:TeamsUI.ViewModels.Components"
     d:DesignHeight="450"
-    d:DesignWidth="80"
+    d:DesignWidth="800"
+    x:DataType="vm:SideBarViewModel"
     mc:Ignorable="d">
-    <ListBox Background="Red" />
+    <Design.DataContext>
+        <!--
+            This only sets the DataContext for the previewer in an IDE,
+            to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs)
+        -->
+        <vm:SideBarViewModel />
+    </Design.DataContext>
+    <Grid>
+        <Grid RowDefinitions="*,50">
+            <ListBox
+                Grid.Row="0"
+                Background="Transparent"
+                ItemsSource="{Binding Menus}">
+                <ListBox.Styles>
+                    <Style Selector="ListBoxItem">
+                        <Setter Property="Background" Value="Transparent" />
+                        <Setter Property="BorderBrush" Value="Transparent" />
+                        <Setter Property="BorderThickness" Value="3,0,0,0" />
+                        <Setter Property="Height" Value="50" />
+                        <Setter Property="Padding" Value="2,3" />
+                        <Setter Property="Foreground" Value="{DynamicResource Black300}" />
+                    </Style>
+                    <Style Selector="ListBoxItem TextBlock#Select">
+                        <Setter Property="IsVisible" Value="False" />
+                    </Style>
+                    <Style Selector="ListBoxItem TextBlock#Normal">
+                        <Setter Property="IsVisible" Value="True" />
+                    </Style>
+                    <Style Selector="ListBoxItem:pointerover TextBlock#Normal">
+                        <Setter Property="IsVisible" Value="False" />
+                    </Style>
+                    <Style Selector="ListBoxItem:pointerover TextBlock#Select">
+                        <Setter Property="IsVisible" Value="True" />
+                    </Style>
+                    <Style Selector="ListBoxItem:selected TextBlock#Normal">
+                        <Setter Property="IsVisible" Value="False" />
+                    </Style>
+                    <Style Selector="ListBoxItem:selected TextBlock#Select">
+                        <Setter Property="IsVisible" Value="True" />
+                    </Style>
+                    <Style Selector="ListBoxItem:pointerover/template/ContentPresenter">
+                        <Setter Property="Background" Value="{DynamicResource White100}" />
+                        <Setter Property="Foreground" Value="{DynamicResource Blue100}" />
+                    </Style>
+                    <Style Selector="ListBoxItem:pressed/template/ContentPresenter">
+                        <Setter Property="Background" Value="{DynamicResource White100}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource Blue100}" />
+                        <Setter Property="BorderThickness" Value="2,0,0,0" />
+                        <Setter Property="Foreground" Value="{DynamicResource Blue100}" />
+                    </Style>
+                    <Style Selector="ListBoxItem:selected/template/ContentPresenter">
+                        <Setter Property="Background" Value="{DynamicResource White100}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource Blue100}" />
+                        <Setter Property="BorderThickness" Value="3,0,0,0" />
+                        <Setter Property="Foreground" Value="{DynamicResource Blue100}" />
+                    </Style>
+                </ListBox.Styles>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Height="50" RowDefinitions="*,*">
+                            <TextBlock
+                                x:Name="Normal"
+                                Grid.Row="0"
+                                HorizontalAlignment="Center"
+                                FontSize="27">
+                                <materialIcons:MaterialIcon
+                                    Width="28"
+                                    Height="28"
+                                    Kind="{Binding IconOutline}" />
+                            </TextBlock>
+                            <TextBlock
+                                x:Name="Select"
+                                Grid.Row="0"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Top">
+                                <materialIcons:MaterialIcon
+                                    Width="28"
+                                    Height="28"
+                                    Kind="{Binding Icon}" />
+                            </TextBlock>
+                            <TextBlock
+                                Grid.Row="1"
+                                Margin="0,2"
+                                HorizontalAlignment="Center"
+                                FontSize="11"
+                                Text="{Binding Name}" />
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+
+            </ListBox>
+            <Button
+                Grid.Row="1"
+                Height="50"
+                Classes="Help">
+                <Button.Styles>
+                    <Style Selector="Button">
+                        <Setter Property="Background" Value="Transparent" />
+                        <Setter Property="Foreground" Value="{DynamicResource Black300}" />
+                        <Setter Property="BorderThickness" Value="3,0,0,0" />
+                        <Setter Property="BorderBrush" Value="Transparent" />
+                        <Setter Property="Padding" Value="23,0" />
+                    </Style>
+                    <Style Selector="Button TextBlock#Select">
+                        <Setter Property="IsVisible" Value="False" />
+                    </Style>
+                    <Style Selector="Button TextBlock#Normal">
+                        <Setter Property="IsVisible" Value="True" />
+                    </Style>
+                    <Style Selector="Button:pointerover TextBlock#Normal">
+                        <Setter Property="IsVisible" Value="False" />
+                    </Style>
+                    <Style Selector="Button:pointerover TextBlock#Select">
+                        <Setter Property="IsVisible" Value="True" />
+                    </Style>
+                    <Style Selector="Button:focus TextBlock#Normal">
+                        <Setter Property="IsVisible" Value="False" />
+                    </Style>
+                    <Style Selector="Button:focus TextBlock#Select">
+                        <Setter Property="IsVisible" Value="True" />
+                    </Style>
+                    <Style Selector="Button:pointerover/template/ContentPresenter">
+                        <Setter Property="Background" Value="{DynamicResource White100}" />
+                        <Setter Property="Foreground" Value="{DynamicResource Blue100}" />
+                    </Style>
+                    <Style Selector="Button:focus/template/ContentPresenter">
+                        <Setter Property="Background" Value="{DynamicResource White100}" />
+                        <Setter Property="Foreground" Value="{DynamicResource Blue100}" />
+                        <Setter Property="BorderThickness" Value="3,0,0,0" />
+                        <Setter Property="CornerRadius" Value="0" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource Blue100}" />
+                    </Style>
+                </Button.Styles>
+                <Grid RowDefinitions="*,*">
+                    <TextBlock
+                        x:Name="Normal"
+                        Grid.Row="0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top">
+                        <materialIcons:MaterialIconExt Kind="QuestionMarkCircleOutline" Size="28" />
+                    </TextBlock>
+                    <TextBlock
+                        x:Name="Select"
+                        Grid.Row="0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top">
+                        <materialIcons:MaterialIconExt Kind="QuestionMarkCircle" Size="28" />
+                    </TextBlock>
+                    <TextBlock
+                        Grid.Row="1"
+                        Margin="0,2"
+                        HorizontalAlignment="Center"
+                        FontSize="11"
+                        Text="Aide" />
+                </Grid>
+            </Button>
+        </Grid>
+    </Grid>
 </UserControl>
