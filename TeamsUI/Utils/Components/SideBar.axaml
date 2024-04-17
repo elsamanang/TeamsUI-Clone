@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="clr-namespace:TeamsUI.ViewModels.Components"
     d:DesignHeight="450"
-    d:DesignWidth="800"
+    d:DesignWidth="80"
     x:DataType="vm:SideBarViewModel"
     mc:Ignorable="d">
     <Design.DataContext>
@@ -76,8 +76,8 @@
                                 HorizontalAlignment="Center"
                                 FontSize="27">
                                 <materialIcons:MaterialIcon
-                                    Width="28"
-                                    Height="28"
+                                    Width="27"
+                                    Height="27"
                                     Kind="{Binding IconOutline}" />
                             </TextBlock>
                             <TextBlock
@@ -86,13 +86,13 @@
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Top">
                                 <materialIcons:MaterialIcon
-                                    Width="28"
-                                    Height="28"
+                                    Width="27"
+                                    Height="27"
                                     Kind="{Binding Icon}" />
                             </TextBlock>
                             <TextBlock
                                 Grid.Row="1"
-                                Margin="0,2"
+                                Margin="-1,2"
                                 HorizontalAlignment="Center"
                                 FontSize="11"
                                 Text="{Binding Name}" />

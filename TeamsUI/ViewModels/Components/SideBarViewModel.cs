@@ -25,9 +25,12 @@ namespace TeamsUI.ViewModels.Components
         {
             var data = new ObservableCollection<Menu>()
             {
-               new Menu {Name= "Nom", Icon=MaterialIconKind.Bell, IconOutline=MaterialIconKind.BellOutline },
-               new Menu {Name= "Nom", Icon=MaterialIconKind.ChatProcessing, IconOutline=MaterialIconKind.ChatProcessingOutline},
-               new Menu {Name= "Nom", Icon=MaterialIconKind.AccountGroup, IconOutline=MaterialIconKind.AccountGroupOutline},
+               new Menu {Name= "Activité", Icon=MaterialIconKind.Bell, IconOutline=MaterialIconKind.BellOutline },
+               new Menu {Name= "Conversqtion", Icon=MaterialIconKind.ChatProcessing, IconOutline=MaterialIconKind.ChatProcessingOutline},
+               new Menu {Name= "Eauipe", Icon=MaterialIconKind.AccountGroup, IconOutline=MaterialIconKind.AccountGroupOutline},
+               new Menu {Name= "Devoir", Icon=MaterialIconKind.BagPersonal, IconOutline=MaterialIconKind.BagPersonalOutline},
+               new Menu {Name= "Calendrier", Icon=MaterialIconKind.CalendarMonth, IconOutline=MaterialIconKind.CalendarMonthOutline},
+               new Menu {Name= "", Icon=MaterialIconKind.DotsHorizontal, IconOutline=MaterialIconKind.DotsHorizontal},
             };
             
             _menus = data;

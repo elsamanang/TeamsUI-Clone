@@ -9,6 +9,7 @@
     d:DesignHeight="450"
     d:DesignWidth="800"
     Background="{DynamicResource White200}"
+    Padding="2,1"
     CanResize="True"
     ExtendClientAreaToDecorationsHint="True"
     TransparencyLevelHint="AcrylicBlur"
