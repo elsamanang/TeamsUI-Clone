@@ -21,6 +21,7 @@
         <Grid RowDefinitions="*,50">
             <ListBox
                 Grid.Row="0"
+                x:Name="SideMenu"
                 Background="Transparent"
                 ItemsSource="{Binding Menus}">
                 <ListBox.Styles>
