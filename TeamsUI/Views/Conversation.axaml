@@ -36,6 +36,176 @@
                                                                     Size=22}" />
                     </Grid>
                 </Border>
+                <StackPanel Grid.Row="1">
+                    <Expander
+                        Width="300"
+                        VerticalAlignment="Top"
+                        Classes="Expend">
+                        <Expander.Styles>
+                            <Style Selector="Expander">
+                                <Setter Property="Foreground" Value="{DynamicResource Black300}" />
+                                <Setter Property="Background" Value="Transparent" />
+                                <Setter Property="BorderBrush" Value="Transparent" />
+                                <Setter Property="BorderThickness" Value="0" />
+                                <Setter Property="Padding" Value="0" />
+                            </Style>
+                            <Style Selector="Expander/template/ContentPresenter">
+                                <Setter Property="Background" Value="Red" />
+                            </Style>
+                        </Expander.Styles>
+                        <Expander.Header>
+                            Suggetions
+                        </Expander.Header>
+                        <ListBox>
+                            <ListBox.Styles>
+                                <Style Selector="ListBoxItem">
+                                    <Setter Property="Background" Value="Transparent" />
+                                    <Setter Property="Height" Value="50" />
+                                    <Setter Property="Padding" Value="20,0" />
+                                    <Setter Property="Foreground" Value="{DynamicResource Black300}" />
+                                </Style>
+                                <Style Selector="ListBoxItem:pointerover/template/ContentPresenter">
+                                    <Setter Property="Background" Value="{DynamicResource White100}" />
+                                </Style>
+                                <Style Selector="ListBoxItem:pressed/template/ContentPresenter">
+                                    <Setter Property="Background" Value="{DynamicResource White100}" />
+                                </Style>
+                                <Style Selector="ListBoxItem:selected/template/ContentPresenter">
+                                    <Setter Property="Background" Value="{DynamicResource White100}" />
+                                </Style>
+                            </ListBox.Styles>
+                            <ListBoxItem>
+                                <Grid ColumnDefinitions="40,160,60">
+                                    <Border
+                                        Grid.Column="0"
+                                        Width="35"
+                                        Height="38"
+                                        Background="AliceBlue"
+                                        CornerRadius="40">
+                                        <Grid>
+                                            <TextBlock
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                Text="EM" />
+                                            <Border
+                                                Width="10"
+                                                Height="10"
+                                                HorizontalAlignment="Right"
+                                                VerticalAlignment="Bottom"
+                                                Background="Red"
+                                                CornerRadius="10" />
+                                        </Grid>
+                                    </Border>
+                                    <TextBlock
+                                        Grid.Column="1"
+                                        Margin="5,0"
+                                        VerticalAlignment="Center"
+                                        Text="ici le text" />
+                                    <StackPanel Grid.Column="2" Orientation="Horizontal">
+                                        <Button
+                                            HorizontalAlignment="Right"
+                                            VerticalAlignment="Center"
+                                            Classes="Icon1"
+                                            Content="{materialIcons:MaterialIconExt Kind=ArrowTopRightBoldBoxOutline,
+                                                                                    Size=22}" />
+                                        <Button
+                                            HorizontalAlignment="Right"
+                                            VerticalAlignment="Center"
+                                            Classes="Icon1"
+                                            Content="{materialIcons:MaterialIconExt Kind=DotsHorizontal,
+                                                                                    Size=22}" />
+                                    </StackPanel>
+                                </Grid>
+                            </ListBoxItem>
+                            <ListBoxItem>
+                                <Grid ColumnDefinitions="40,160,60">
+                                    <Border
+                                        Grid.Column="0"
+                                        Width="35"
+                                        Height="38"
+                                        Background="AliceBlue"
+                                        CornerRadius="40">
+                                        <Grid>
+                                            <TextBlock
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                Text="EM" />
+                                            <Border
+                                                Width="10"
+                                                Height="10"
+                                                HorizontalAlignment="Right"
+                                                VerticalAlignment="Bottom"
+                                                Background="Red"
+                                                CornerRadius="10" />
+                                        </Grid>
+                                    </Border>
+                                    <TextBlock
+                                        Grid.Column="1"
+                                        Margin="5,0"
+                                        VerticalAlignment="Center"
+                                        Text="ici le text" />
+                                    <StackPanel Grid.Column="2" Orientation="Horizontal">
+                                        <Button
+                                            HorizontalAlignment="Right"
+                                            VerticalAlignment="Center"
+                                            Classes="Icon1"
+                                            Content="{materialIcons:MaterialIconExt Kind=ArrowTopRightBoldBoxOutline,
+                                                                                    Size=22}" />
+                                        <Button
+                                            HorizontalAlignment="Right"
+                                            VerticalAlignment="Center"
+                                            Classes="Icon1"
+                                            Content="{materialIcons:MaterialIconExt Kind=DotsHorizontal,
+                                                                                    Size=22}" />
+                                    </StackPanel>
+                                </Grid>
+                            </ListBoxItem>
+                            <ListBoxItem>
+                                <Grid ColumnDefinitions="40,160,60">
+                                    <Border
+                                        Grid.Column="0"
+                                        Width="35"
+                                        Height="38"
+                                        Background="AliceBlue"
+                                        CornerRadius="40">
+                                        <Grid>
+                                            <TextBlock
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                Text="EM" />
+                                            <Border
+                                                Width="10"
+                                                Height="10"
+                                                HorizontalAlignment="Right"
+                                                VerticalAlignment="Bottom"
+                                                Background="Red"
+                                                CornerRadius="10" />
+                                        </Grid>
+                                    </Border>
+                                    <TextBlock
+                                        Grid.Column="1"
+                                        Margin="5,0"
+                                        VerticalAlignment="Center"
+                                        Text="ici le text" />
+                                    <StackPanel Grid.Column="2" Orientation="Horizontal">
+                                        <Button
+                                            HorizontalAlignment="Right"
+                                            VerticalAlignment="Center"
+                                            Classes="Icon1"
+                                            Content="{materialIcons:MaterialIconExt Kind=ArrowTopRightBoldBoxOutline,
+                                                                                    Size=22}" />
+                                        <Button
+                                            HorizontalAlignment="Right"
+                                            VerticalAlignment="Center"
+                                            Classes="Icon1"
+                                            Content="{materialIcons:MaterialIconExt Kind=DotsHorizontal,
+                                                                                    Size=22}" />
+                                    </StackPanel>
+                                </Grid>
+                            </ListBoxItem>
+                        </ListBox>
+                    </Expander>
+                </StackPanel>
             </Grid>
         </Border>
         <Grid
