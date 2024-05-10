@@ -24,7 +24,7 @@
         <Grid
             x:Name="Title"
             Grid.Row="0"
-            ColumnDefinitions="300,*,150, 150">
+            ColumnDefinitions="80,410,150, 150">
             <StackPanel
                 Grid.Column="0"
                 Margin="3,0"
@@ -43,7 +43,7 @@
                                                             Size=25}" />
             </StackPanel>
             <TextBox
-                Grid.Column="1"
+                Grid.Column="2"
                 Classes="Search"
                 Watermark="Recherche" />
         </Grid>
