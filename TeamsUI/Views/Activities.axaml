@@ -50,12 +50,16 @@
                             Text="Non lu uniquement" />
                     </StackPanel>
                     <TextBlock
-                        Margin="20,40"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         Foreground="{DynamicResource Black300}"
-                        Text="Vous verrez les mentions, les réponses et les autres notifications ici."
-                        TextWrapping="WrapWithOverflow" />
+                        TextWrapping="WrapWithOverflow">
+                        <Span>Vous verrez les mentions, les</Span>
+                        <LineBreak />
+                        <Span>réponses et les autres notifications</Span>
+                        <LineBreak />
+                        <Span>ici.</Span>
+                    </TextBlock>
                 </StackPanel>
             </Grid>
         </Border>
