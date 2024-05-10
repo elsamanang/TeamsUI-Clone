@@ -22,9 +22,22 @@
         <Setter Property="Foreground" Value="{DynamicResource White100}" />
         <Setter Property="Cursor" Value="Hand" />
     </Style>
+    <Style Selector="Button.Icon1">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderThickness" Value="0" />
+    </Style>
+    <Style Selector="Button.Icon1/template/ContentPresenter">
+        <Setter Property="Foreground" Value="{DynamicResource Black300}" />
+    </Style>
+    <Style Selector="Button.Icon1:pointerover/template/ContentPresenter">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Foreground" Value="{DynamicResource Blue100}" />
+        <Setter Property="FontWeight" Value="Thin" />
+        <Setter Property="Cursor" Value="Hand" />
+    </Style>
     <Style Selector="TextBox.Search">
         <Setter Property="Background" Value="{DynamicResource Blue400}" />
-        <Setter Property="Width" Value="600" />
+        <Setter Property="Width" Value="400" />
         <Setter Property="Height" Value="30" />
         <Setter Property="Margin" Value="8,15" />
         <Setter Property="Foreground" Value="{DynamicResource Black300}" />

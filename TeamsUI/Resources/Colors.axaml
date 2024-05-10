@@ -9,6 +9,7 @@
     <Color x:Key="PrimaryBlack">#242424</Color>
     <Color x:Key="SecondaryBlack">#426869</Color>
     <Color x:Key="ThirdBlack">#767676</Color>
+    <Color x:Key="FourthBlack">#c8c8c8</Color>
     <!--  End Colors  -->
 
     <!--  Region Brush  -->
@@ -21,5 +22,6 @@
     <SolidColorBrush x:Key="Black100" Color="{StaticResource PrimaryBlack}" />
     <SolidColorBrush x:Key="Black200" Color="{StaticResource SecondaryBlack}" />
     <SolidColorBrush x:Key="Black300" Color="{StaticResource ThirdBlack}" />
+    <SolidColorBrush x:Key="Black400" Color="{StaticResource FourthBlack}" />
     <!--  End Brush  -->
 </ResourceDictionary>
