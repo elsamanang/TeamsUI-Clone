@@ -10,7 +10,7 @@
     mc:Ignorable="d">
     <Grid ColumnDefinitions="300,*">
         <Border Grid.Column="0" BoxShadow="0 0 9 0 DarkGray">
-            <Grid RowDefinitions="50,*">
+            <Grid RowDefinitions="50,750">
                 <Border BorderBrush="{DynamicResource Black400}" BorderThickness="0,0,0,1">
                     <Grid ColumnDefinitions="220,35,35">
                         <TextBlock
@@ -40,7 +40,8 @@
                     <Expander
                         Width="300"
                         VerticalAlignment="Top"
-                        Classes="Expend">
+                        Classes="Expend"
+                        IsExpanded="True">
                         <Expander.Styles>
                             <Style Selector="Expander">
                                 <Setter Property="Foreground" Value="{DynamicResource Black300}" />
@@ -50,7 +51,7 @@
                                 <Setter Property="Padding" Value="0" />
                             </Style>
                             <Style Selector="Expander/template/ContentPresenter">
-                                <Setter Property="Background" Value="Red" />
+                                <Setter Property="Background" Value="{DynamicResource Blue300}" />
                             </Style>
                         </Expander.Styles>
                         <Expander.Header>
@@ -64,10 +65,25 @@
                                     <Setter Property="Padding" Value="20,0" />
                                     <Setter Property="Foreground" Value="{DynamicResource Black300}" />
                                 </Style>
+                                <Style Selector="ListBoxItem StackPanel.detailsIcon">
+                                    <Setter Property="IsVisible" Value="False" />
+                                </Style>
+                                <Style Selector="ListBoxItem:pointerover StackPanel.detailsIcon">
+                                    <Setter Property="IsVisible" Value="True" />
+                                </Style>
+                                <Style Selector="ListBoxItem:pressed StackPanel.detailsIcon">
+                                    <Setter Property="IsVisible" Value="True" />
+                                </Style>
+                                <Style Selector="ListBoxItem:selected StackPanel.detailsIcon">
+                                    <Setter Property="IsVisible" Value="True" />
+                                </Style>
                                 <Style Selector="ListBoxItem:pointerover/template/ContentPresenter">
                                     <Setter Property="Background" Value="{DynamicResource White100}" />
                                 </Style>
                                 <Style Selector="ListBoxItem:pressed/template/ContentPresenter">
+                                    <Setter Property="Background" Value="{DynamicResource White100}" />
+                                </Style>
+                                <Style Selector="ListBoxItem:selected/template/ContentPresenter">
                                     <Setter Property="Background" Value="{DynamicResource White100}" />
                                 </Style>
                                 <Style Selector="ListBoxItem:selected/template/ContentPresenter">
@@ -92,7 +108,7 @@
                                                 Height="10"
                                                 HorizontalAlignment="Right"
                                                 VerticalAlignment="Bottom"
-                                                Background="Red"
+                                                Background="{DynamicResource Blue300}"
                                                 CornerRadius="10" />
                                         </Grid>
                                     </Border>
@@ -101,7 +117,10 @@
                                         Margin="5,0"
                                         VerticalAlignment="Center"
                                         Text="ici le text" />
-                                    <StackPanel Grid.Column="2" Orientation="Horizontal">
+                                    <StackPanel
+                                        Grid.Column="2"
+                                        Classes="detailsIcon"
+                                        Orientation="Horizontal">
                                         <Button
                                             HorizontalAlignment="Right"
                                             VerticalAlignment="Center"
@@ -135,7 +154,7 @@
                                                 Height="10"
                                                 HorizontalAlignment="Right"
                                                 VerticalAlignment="Bottom"
-                                                Background="Red"
+                                                Background="{DynamicResource Blue300}"
                                                 CornerRadius="10" />
                                         </Grid>
                                     </Border>
@@ -144,7 +163,10 @@
                                         Margin="5,0"
                                         VerticalAlignment="Center"
                                         Text="ici le text" />
-                                    <StackPanel Grid.Column="2" Orientation="Horizontal">
+                                    <StackPanel
+                                        Grid.Column="2"
+                                        Classes="detailsIcon"
+                                        Orientation="Horizontal">
                                         <Button
                                             HorizontalAlignment="Right"
                                             VerticalAlignment="Center"
@@ -178,7 +200,7 @@
                                                 Height="10"
                                                 HorizontalAlignment="Right"
                                                 VerticalAlignment="Bottom"
-                                                Background="Red"
+                                                Background="{DynamicResource Blue300}"
                                                 CornerRadius="10" />
                                         </Grid>
                                     </Border>
@@ -187,7 +209,10 @@
                                         Margin="5,0"
                                         VerticalAlignment="Center"
                                         Text="ici le text" />
-                                    <StackPanel Grid.Column="2" Orientation="Horizontal">
+                                    <StackPanel
+                                        Grid.Column="2"
+                                        Classes="detailsIcon"
+                                        Orientation="Horizontal">
                                         <Button
                                             HorizontalAlignment="Right"
                                             VerticalAlignment="Center"

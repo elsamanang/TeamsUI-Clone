@@ -10,7 +10,7 @@
     mc:Ignorable="d">
     <Grid ColumnDefinitions="300,*">
         <Border Grid.Column="0" BoxShadow="0 0 9 0 DarkGray">
-            <Grid RowDefinitions="50,*">
+            <Grid RowDefinitions="50,750">
                 <Border BorderBrush="{DynamicResource Black400}" BorderThickness="0,0,0,1">
                     <Grid ColumnDefinitions="220,35,35">
                         <TextBlock
