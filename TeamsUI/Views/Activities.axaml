@@ -33,7 +33,14 @@
                             VerticalAlignment="Center"
                             Classes="Icon1"
                             Content="{materialIcons:MaterialIconExt Kind=DotsHorizontal,
-                                                                    Size=22}" />
+                                                                    Size=22}">
+                            <Button.ContextMenu>
+                                <ContextMenu Width="180" Cursor="Hand">
+                                    <MenuItem Header="Copy" />
+                                    <MenuItem Header="Paste" />
+                                </ContextMenu>
+                            </Button.ContextMenu>
+                        </Button>
                     </Grid>
                 </Border>
                 <StackPanel Grid.Row="1">
